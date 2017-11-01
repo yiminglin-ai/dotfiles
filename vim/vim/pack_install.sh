@@ -4,6 +4,7 @@ git submodule add https://github.com/scrooloose/nerdcommenter.git         pack/e
 git submodule add https://github.com/scrooloose/nerdtree.git              pack/editor/start/nerdtree.git
 git submodule add https://github.com/vim-airline/vim-airline.git          pack/editor/start/vim-airline.git
 git submodule add https://github.com/jistr/vim-nerdtree-tabs.git          pack/editor/start/vim-nerdtree-tabs.git
+git submodule add git@github.com:leafgarland/typescript-vim.git           pack/editor/start/typescript-vim.git
 
 git submodule add https://github.com/Addisonbean/Vim-Xcode-Theme.git      pack/themes/start/Vim-Xcode-Theme.git
 git submodule add https://github.com/tomasr/molokai.git                   pack/themes/start/molokai.git

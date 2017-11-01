@@ -37,3 +37,9 @@
 [submodule "vim/vim/pack/editor/start/easy-align.git"]
 	path = vim/vim/pack/editor/start/easy-align.git
 	url = https://github.com/junegunn/vim-easy-align.git
+[submodule "vim/vim/pack/editor/start/typescript-vim"]
+	path = vim/vim/pack/editor/start/typescript-vim.git
+	url = https://github.com/leafgarland/typescript-vim
+[submodule "vim/vim/pack/editor/start/typescript-vim.git"]
+	path = vim/vim/pack/editor/start/typescript-vim.git
+	url = git@github.com:leafgarland/typescript-vim.git
