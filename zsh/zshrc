@@ -8,10 +8,6 @@ bindkey -M vicmd '/' history-incremental-search-backward
 # bolt fonts in terminal
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-#alias ipython='ipython --pylab'
-alias display="display -update 2"
-alias tunnel_vlc='ssh -NfL 44444:localhost:5900 limoges'
-
 #bug with git, can be removed soon
 export SSH_AUTH_SOCK=0
 export HOMEBREW_EDITOR=vim
@@ -24,7 +20,7 @@ export LIBRARY_PATH=''
 #
 case "$OSTYPE" in
   linux*)   export BREW=$HOME/.linuxbrew ;;
-  darwin*)  export BREW=$HOME/.homebrew ;;
+  darwin*)  export BREW=/usr/local/Homebrew/ ;;
   win*)     echo "Windows" ;;
   cygwin*)  echo "Cygwin" ;;
   bsd*)     echo "BSD" ;;
@@ -34,7 +30,7 @@ esac
 
 export PATH=$PATH:${CONDOR_HOME}/bin
 
-SOURCES=( $HOME/anaconda3 $BREW /usr/local /usr /)
+SOURCES=( $HOME/miniconda3 $BREW /usr/local /usr /)
 #SOURCES=( $HOME/.local/cuda $HOME/.miniconda $BREW /usr/local /usr /)
 for i in ${SOURCES[*]}; do
 
@@ -54,15 +50,4 @@ export LD_LIBRARY_PATH=$HOME/.cuda/lib64:$LD_LIBRARY_PATH
 #export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$HOME/.cuda/lib$DYLD_LIBRARY_PATH
 export PATH="$HOME/.cuda/bin:$PATH"
 
-export PYTHONPATH=$PYTHONPATH:/home/yiming/anaconda3/lib/python3.6/site-packages
-export LD_LIBRARY_PATH=/usr/local/lib/:/home/yiming/opencv/build/lib:$LD_LIBRARY_PATH
-
-# added by Anaconda2 4.4.0 installer
-export PATH="/usr/local/cuda-8.0/bin:$PATH"
-alias fg="source activate fg"
-
-
-# added by Anaconda3 4.4.0 installer
-alias jn="jupyter notebook --port=8777 --no-browser"
 alias count="ls | wc -l"
-alias py2="source activate py2"
