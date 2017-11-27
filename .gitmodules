@@ -43,3 +43,6 @@
 [submodule "vim/vim/pack/editor/start/typescript-vim.git"]
 	path = vim/vim/pack/editor/start/typescript-vim.git
 	url = git@github.com:leafgarland/typescript-vim.git
+[submodule "vim/vim/pack/editor/start/vim-matlab.git"]
+	path = vim/vim/pack/editor/start/vim-matlab.git
+	url = git@github.com:lazywei/vim-matlab.git
