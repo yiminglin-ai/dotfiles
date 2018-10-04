@@ -28,10 +28,9 @@ case "$OSTYPE" in
   *)        echo "unknown: $OSTYPE" ;;
 esac
 
-export PATH=$PATH:${CONDOR_HOME}/bin
 
-SOURCES=( $HOME/miniconda3 $BREW /usr/local /usr /)
-#SOURCES=( $HOME/.local/cuda $HOME/.miniconda $BREW /usr/local /usr /)
+SOURCES=( $HOME/projects/miniconda3 $BREW /usr/local /usr /)
+
 for i in ${SOURCES[*]}; do
 
     export PATH=$PATH:$i/bin
@@ -41,13 +40,9 @@ for i in ${SOURCES[*]}; do
     #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$i/lib
 
 done
-export PATH=$PATH:/usr/texbin
 
 #Python environment and settings
 export PYTHONWARNINGS="ignore"
 
-export LD_LIBRARY_PATH=$HOME/.cuda/lib64:$LD_LIBRARY_PATH
-#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$HOME/.cuda/lib$DYLD_LIBRARY_PATH
-export PATH="$HOME/.cuda/bin:$PATH"
 
 alias count="ls | wc -l"
