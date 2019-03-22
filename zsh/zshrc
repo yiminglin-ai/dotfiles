@@ -8,9 +8,6 @@ bindkey -M vicmd '/' history-incremental-search-backward
 # bolt fonts in terminal
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-#alias ipython='ipython --pylab'
-alias display="display -update 2"
-alias tunnel_vlc='ssh -NfL 44444:localhost:5900 limoges'
 
 #bug with git, can be removed soon
 export SSH_AUTH_SOCK=0
@@ -34,28 +31,18 @@ esac
 
 export PATH=$PATH:${CONDOR_HOME}/bin
 
-SOURCES=( $HOME/.miniconda $BREW /usr/local /usr /)
+SOURCES=( /usr/local/cuda/ $HOME/.miniconda $BREW /usr/local /usr /)
 for i in ${SOURCES[*]}; do
 
     export PATH=$PATH:$i/bin
     export PATH=$PATH:$i/sbin
     export CPATH=$CPATH:$i/include
     export LIBRARY_PATH=$LIBRARY_PATH:$i/lib
-    #export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$i/lib
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$i/lib
 
 done
-export PATH=$PATH:/usr/texbin
-
-#Python environment and settings
-export PYTHONWARNINGS="ignore"
-
-export LD_LIBRARY_PATH=$HOME/.cuda/lib64:$LD_LIBRARY_PATH
-#export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:$HOME/.cuda/lib$DYLD_LIBRARY_PATH
-export PATH="$HOME/.cuda/bin:$PATH"
-
-export PYTHONPATH=$PYTHONPATH:/home/yiming/anaconda3/lib/python3.6/site-packages
-export LD_LIBRARY_PATH=/usr/local/lib/:/home/yiming/opencv/build/lib:$LD_LIBRARY_PATH
 
 
 alias jn="jupyter notebook --port=8777 --no-browser"
+alias sa="source activate"
 alias count="ls | wc -l"
