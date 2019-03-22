@@ -34,8 +34,7 @@ esac
 
 export PATH=$PATH:${CONDOR_HOME}/bin
 
-SOURCES=( $HOME/anaconda3 $BREW /usr/local /usr /)
-#SOURCES=( $HOME/.local/cuda $HOME/.miniconda $BREW /usr/local /usr /)
+SOURCES=( $HOME/.miniconda $BREW /usr/local /usr /)
 for i in ${SOURCES[*]}; do
 
     export PATH=$PATH:$i/bin
@@ -57,12 +56,6 @@ export PATH="$HOME/.cuda/bin:$PATH"
 export PYTHONPATH=$PYTHONPATH:/home/yiming/anaconda3/lib/python3.6/site-packages
 export LD_LIBRARY_PATH=/usr/local/lib/:/home/yiming/opencv/build/lib:$LD_LIBRARY_PATH
 
-# added by Anaconda2 4.4.0 installer
-export PATH="/usr/local/cuda-8.0/bin:$PATH"
-alias fg="source activate fg"
 
-
-# added by Anaconda3 4.4.0 installer
 alias jn="jupyter notebook --port=8777 --no-browser"
 alias count="ls | wc -l"
-alias py2="source activate py2"
