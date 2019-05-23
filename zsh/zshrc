@@ -45,6 +45,8 @@ done
 
 alias jn="jupyter notebook --port=8777 --no-browser"
 alias sa="source activate"
+alias ca="conda activate"
 alias count="ls | wc -l"
 export PYTHONWARNINGS="ignore"
+
 
